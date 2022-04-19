@@ -1,0 +1,86 @@
+.nameSurah {
+  color: green;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 30px;
+  margin-top: 50px;
+}
+
+
+
+.wrapItems{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+padding: 50px 0;
+  gap: 50px 20px;
+  li{
+    text-align: center;
+    padding: 20px 15px;
+    background: rgb(245, 232, 208);
+    width: 95%;
+    margin: 0 auto;
+    font-size: 30px;
+    border-radius: 20px;
+    
+    span{
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      gap: 15px;
+      padding: 20px 0;
+      cursor: pointer;
+      // background-color: red;
+    }
+  }
+  
+}
+
+
+.circle{
+  background-color: green;
+  color: white;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  margin: 0 auto;
+}
+
+
+
+@media (max-width:768px){
+  .nameSurah{
+    font-size: 18px;
+    padding: 10px 0;
+  }
+  .wrapItems{
+    padding: 10px 0;
+    li{
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+  .circle{
+    height: 35px;
+    width: 35px;
+  }
+}
+
+@media(min-width:769px) and (max-width:1024px){
+  .wrapItems{
+    li{
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+
+  .circle{
+    width: 45px;
+    height: 45px;
+  }
+}

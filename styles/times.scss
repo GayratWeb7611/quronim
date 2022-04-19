@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+.time-body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  margin: 70px 0;
+}
+.times {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3em;
+  background: rgba(207, 206, 206, 0.224);
+  backdrop-filter: blur(5px);
+  width: 670px;
+  height: 670px;
+  box-shadow: 0 0 20px 2px grey;
+  border-radius: 50%;
+  position: relative;
+}
+
+.strelka {
+  width: 6px;
+  height: 170px;
+  background: orange;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: top;
+  transition: 0.5s;
+  border-radius: 20px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: orange;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 5px 1px lightgreen;
+  }
+}
+
+.time_card {
+  background-color: lightgray;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.6;
+
+  &:hover{
+    opacity: 1;
+    transition: .2s;
+  }
+
+  &:nth-child(1) {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &:nth-child(2) {
+    position: absolute;
+    top: 26%;
+    right: -45px;
+    transform: translateX(-50%);
+  }
+
+  &:nth-child(3) {
+    position: absolute;
+    top: 66%;
+    right: 10px;
+    transform: translateX(-50%);
+  }
+  &:nth-child(4) {
+    position: absolute;
+    top: 67%;
+    left: 155px;
+    transform: translateX(-50%);
+  }
+  &:nth-child(5) {
+    position: absolute;
+    top: 26%;
+    left: 95px;
+    transform: translateX(-50%);
+  }
+}
+.current {
+  opacity: 1;
+  animation: scalel 5s linear infinite;
+  box-shadow: 0 0 5px 1px aqua;
+  &::before{
+      position: absolute;
+      content: "";
+      width: 30px;
+      height: 105%;
+      background-color: transparent;
+      box-shadow: 0px 3px aqua, 0px -3px aqua;
+      z-index: -3;
+
+      animation: movement 5s linear infinite;
+  }
+
+}
+.time-text {
+  font-size: 28px;
+}
+.time-time {
+  font-size: 28px;
+  color: wheat;
+  font-weight: 900;
+  font-family: 'Oswald', sans-serif;
+  text-shadow: 2px 4px black;
+}
+
+.rot180 {
+  transform: rotate(180deg);
+}
+.rot250 {
+  transform: rotate(250deg);
+}
+.rot315 {
+  transform: rotate(315deg);
+}
+.rot405 {
+  transform: rotate(405deg);
+}
+.rot470 {
+  transform: rotate(470deg);
+}
+
+@keyframes movement {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+
+@media(max-width:1024px){
+    .times{
+        width: 500px;
+        height: 500px;
+    }
+
+    .strelka{
+        height: 120px;
+    }
+
+    .time_card{
+        width: 100px;
+        height: 100px;
+
+        &:nth-child(2){
+            right: -32px;
+            top: 28%;
+        }
+        &:nth-child(4){
+            top: 68%;
+            left: 120px;
+        }
+
+        &:nth-child(5){
+            top: 28%;
+            left: 65px;
+        }
+    }
+
+    .time-text{
+        font-size: 20px;
+    }
+    .time-time{
+        font-size: 20px;
+    }
+}
+
+
+@media(max-width:768px){
+
+    .times{
+        width: 350px;
+        height: 350px;
+    }
+
+    .time_card{
+        width: 80px;
+        height: 80px;
+
+        &:nth-child(2){
+            top: 27%;
+            right: -28px;
+        }
+        &:nth-child(4){
+            top: 68.5%;
+            left: 100px;
+        }
+
+        &:nth-child(5){
+            left: 50px;
+        }
+    }
+
+    .time-text{
+        font-size: 16px;
+    }
+
+    .time-time{
+        font-size: 15px;
+    }
+
+    .strelka{
+        height: 75px;
+    }
+
+}
+
+

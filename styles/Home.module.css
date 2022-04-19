@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    height: 100vh;
+}
+
+.container a{
+    background: rgb(17, 138, 38);
+    color: white;
+    padding: 15px 35px;
+    font-size: 22px;
+    border-radius: 20px;
+}
